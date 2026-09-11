@@ -241,32 +241,9 @@ and endpoint assumptions under which it provides the relevant properties.
 
 ## Space
 
-Everything from banking information to critical infrastructure
-management now flows through space communication systems. Public safety,
-health and financial transactions are all high value targets, and they
-motivate attacks against space communications.
+Distance and orbitology between communicating endpoints in space create an environment in which high latency and intermittent link availability are common. Round-trip times range from 20ms in near-earth communications to 23 minutes for deep space. Interactive key exchange protocols that require endpoints to be online and use multiple round trips are sub-optimal in this case. Furthermore, low size, weight, and power devices ubiquitous to this environment benefit the most from amortized bandwidth savings on post-quantum key updates which are not possible using stateless interactive protocols.
 
-Two characteristics distinguish this environment. Propagation delay
-makes each round trip expensive in wall-clock time. Published measurements
-report round-trip times on the order of twenty to two
-hundred and fifty milliseconds in low earth and geostationary orbit,
-five to fourteen seconds for lunar communications, and between just
-under one minute and twenty-three minutes between Earth and Mars
-depending on orbital positions. They also indicate that delay-tolerant
-protocols begin to outperform IP once round-trip times exceed roughly
-two hundred milliseconds. At the upper end of that range an interactive
-handshake is impractical rather than merely slow.
-
-Contact windows bound the time available. An exchange that cannot
-complete inside a window does not complete late; it fails and is retried
-at the next window. Compounding this, post-quantum key material and
-signatures are larger than their classical equivalents, so the exchange
-that must fit inside the window is the one that has grown.
-
-Store-and-forward operation follows from both. The Delay-Tolerant
-Networking working group is progressing key agreement for Bundle
-Protocol Security, which is independent evidence that this case is real
-and that a constituency outside this work holds it.
+Existing approaches to key agreement for endpoints in space involve pre-shared keys and/or highly customized interactive key agreement such as QUIC {{I-D.ietf-tiptop-quic-profile-00}}. Neither of these approaches nor their combinations have satisfactory solutions (e.g. symmetric key **ratcheting**, key wrapping, session resumption keys) to attain post-compromise security under intermittent connectivity. Such a property that is warranted given the growing presence of public health, financial, and critical infrastructure management data on these endpoints. The Delay-Tolerant Networking working group is progressing asynchronous key agreement for Bundle Protocol Security, which is independent evidence that this case is real and that a constituency outside this work holds it.
 
 ## Internet of Things and Operational Technology Systems
 
