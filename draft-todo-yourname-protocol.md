@@ -34,6 +34,7 @@ author:
 informative:
   I-D.ietf-quic-extended-key-update:
   I-D.ietf-tls-extended-key-update:
+  I-D.ietf-tiptop-quic-profile:
   RFC7296:
   RFC9846:
   RFC9001:
@@ -243,7 +244,7 @@ and endpoint assumptions under which it provides the relevant properties.
 
 Distance and orbitology between communicating endpoints in space create an environment in which high latency and intermittent link availability are common. Round-trip times range from 20ms in near-earth communications to 23 minutes for deep space. Interactive key exchange protocols that require endpoints to be online and use multiple round trips are sub-optimal in this case. Furthermore, low size, weight, and power devices ubiquitous to this environment benefit the most from amortized bandwidth savings on post-quantum key updates which are not possible using stateless interactive protocols.
 
-Existing approaches to key agreement for endpoints in space involve pre-shared keys and/or highly customized interactive key agreement such as QUIC {{I-D.ietf-tiptop-quic-profile-00}}. Neither of these approaches nor their combinations have satisfactory solutions (e.g. symmetric key **ratcheting**, key wrapping, session resumption keys) to attain post-compromise security under intermittent connectivity. Such a property that is warranted given the growing presence of public health, financial, and critical infrastructure management data on these endpoints. The Delay-Tolerant Networking working group is progressing asynchronous key agreement for Bundle Protocol Security, which is independent evidence that this case is real and that a constituency outside this work holds it.
+Existing approaches to key agreement for endpoints in space involve pre-shared keys and/or highly customized interactive key agreement such as QUIC {{I-D.ietf-tiptop-quic-profile}}. Neither of these approaches nor their combinations have satisfactory solutions (e.g. symmetric key **ratcheting**, key wrapping, session resumption keys) to attain post-compromise security under intermittent connectivity. Such a property that is warranted given the growing presence of public health, financial, and critical infrastructure management data on these endpoints. The Delay-Tolerant Networking working group is progressing asynchronous key agreement for Bundle Protocol Security, which is independent evidence that this case is real and that a constituency outside this work holds it.
 
 ## Internet of Things and Operational Technology Systems
 
