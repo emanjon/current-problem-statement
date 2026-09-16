@@ -287,6 +287,20 @@ Devices provisioned with pairwise symmetric keys might not need public-key
 key establishment. This use case applies where key distribution at scale or
 recovery from compromise makes that approach unsuitable.
 
+### Telemetry Collection
+
+A telemetry collection service places collectors inside networks the service
+operator does not
+control, and each collector uploads continuously to a central platform over a
+session-based security protocol. A collector may be many hops from that
+platform, and neither the number of hops nor the latency they add is within the
+operator's control. Because the upload is continuous, the channel is held open for
+the life of the deployment. Key rotation with post-compromise security is desired and its frequency is not
+the operator's choice: it follows from external policy, whether contractual or organizational.
+
+The many hops introduce high and unpredictable latency, which makes synchronous rekeying impractical: an interactive rekey requires both endpoints to be live and a round trip to complete, so a party cannot advance its own key state alone. It remains on key material it has decided to retire for as long as the round trip takes. An asynchronous key update is independent of latency: a party advances the key state alone, without waiting for a reply.
+
+
 ## Virtual Private Networks
 
 VPN connections are often long-lived. Establishing a post-quantum-secure
