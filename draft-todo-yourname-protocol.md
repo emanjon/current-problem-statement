@@ -119,7 +119,7 @@ be limited to contact windows.
 
 Interactive key agreement:
 : Key agreement that requires a request and a corresponding response before
-the initiator can complete the agreement and accept the resulting keying
+the initiator can complete the agreement and store the resulting keying
 material.
 
 Asynchronous key update:
