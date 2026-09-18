@@ -81,7 +81,7 @@ fresh keying material through an interactive exchange
 {{I-D.ietf-quic-extended-key-update}}.
 
 The property considered in this document is that either endpoint can
-independently initiate such an update without the need for a live response from
+independently initiate and complete such an update without waiting for a live response from
 its peer. The peer can process the update later from compatible predecessor
 state. This property is useful even on a reliable network because it allows the
 endpoints to use different update schedules. Long propagation delays,
