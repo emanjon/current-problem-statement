@@ -48,7 +48,9 @@ informative:
 TLS and QUIC allow either endpoint to initiate a traffic key update, but
 their standardized key update mechanisms derive new keys from existing
 key state. They do not introduce fresh keying material and therefore cannot
-restore security after that state has been compromised. Mechanisms currently being developed for TLS and QUIC to introduce fresh keying material use an interactive exchange.
+restore security after that state has been compromised. Mechanisms that
+are currently being developed for TLS and QUIC to introduce fresh
+keying material use an interactive exchange.
 
 This document considers mechanisms through which either endpoint can
 independently initiate a key update that incorporates fresh randomness and can
