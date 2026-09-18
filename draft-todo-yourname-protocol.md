@@ -219,7 +219,7 @@ connection can also require another post-quantum exchange.
 : Forward secrecy can be provided by the initial ephemeral key exchange and
 secure deletion of old key state. Post-compromise security additionally
 requires that after the attacker loses access, the connection must incorporate
-fresh keying material unknown to the attacker {{RFC9420}}. This may require authenticate updates. If updates that introduce fresh keying material require an interactive exchange, recovery cannot begin while the peer is unreachable.
+fresh keying material unknown to the attacker {{RFC9420}}. This may require authenticated updates. If updates that introduce fresh keying material require an interactive exchange, recovery cannot begin while the peer is unreachable.
 
 5. Per-endpoint key update management:
 : Standardized TLS and QUIC traffic key updates can be initiated by either
