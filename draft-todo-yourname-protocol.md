@@ -54,7 +54,7 @@ keying material use an interactive exchange.
 
 This document considers mechanisms through which either endpoint can
 independently initiate a key update that incorporates fresh randomness and can
-provide post-compromise security. The initiator does not have to wait for a live
+provide post-compromise security. The initiator does not wait for a live
 response, and the peer can process it later. This
 property is useful even when both endpoints are normally reachable because it
 allows each endpoint to schedule updates according to its constraints.
