@@ -219,7 +219,7 @@ connection can also require another post-quantum exchange.
 : Forward secrecy can be provided by the initial ephemeral key exchange and
 secure deletion of old key state. Post-compromise security additionally
 requires that after the attacker loses access, the connection must incorporate
-fresh keying material unknown to the attacker {{RFC9420}}. This may require reauthentication. If updates that introduce fresh keying material require an interactive exchange, recovery cannot begin while the peer is unreachable.
+fresh keying material unknown to the attacker {{RFC9420}}. This may require authenticate updates. If updates that introduce fresh keying material require an interactive exchange, recovery cannot begin while the peer is unreachable.
 
 5. Per-endpoint key update management:
 : Standardized TLS and QUIC traffic key updates can be initiated by either
@@ -329,8 +329,7 @@ material to TLS and QUIC
 {{I-D.ietf-tls-extended-key-update}}
 {{I-D.ietf-quic-extended-key-update}}. They address the lack of
 post-compromise recovery in the standardized traffic key update mechanisms.
-They require response messages before the endpoints complete an update. They also require changes to the application protocol to enable reauthentication. They
-therefore do not provide the asynchronous update property described in this
+They require response messages before the endpoints complete an update. They also require changes to the application protocol to enable authenticated updates. They therefore do not provide the asynchronous update property described in this
 document.
 
 QUIC supports resumption, and it permits 0-RTT data on a new connection.
